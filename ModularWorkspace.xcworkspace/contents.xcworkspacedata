@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Shared">
+      <FileRef
+         location = "group:MyMainAppModular/SharedFramework/SharedFramework.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Features">
+      <FileRef
+         location = "group:MyMainAppModular/LoginModule/LoginModule.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:MyMainAppModular/MyMainAppModular.xcodeproj">
+   </FileRef>
+</Workspace>
