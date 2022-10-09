@@ -1,14 +1,14 @@
 //
-//  SharedFrameworkTests.swift
-//  SharedFrameworkTests
+//  LoginFeatuerTests.swift
+//  LoginFeatuerTests
 //
-//  Created by Hiram Castro on 05/10/22.
+//  Created by Hiram Castro on 08/10/22.
 //
 
 import XCTest
-@testable import SharedFramework
+@testable import LoginFeatuer
 
-class SharedFrameworkTests: XCTestCase {
+class LoginFeatuerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
