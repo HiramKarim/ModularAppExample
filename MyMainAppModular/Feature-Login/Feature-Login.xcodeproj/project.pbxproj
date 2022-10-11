@@ -19,6 +19,10 @@
 		1F00764128F27BDD00119C5A /* LoginFeatuerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00764028F27BDD00119C5A /* LoginFeatuerUITestsLaunchTests.swift */; };
 		1F00764D28F27C3800119C5A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00764C28F27C3800119C5A /* LoginCoordinator.swift */; };
 		1F00765228F2928600119C5A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00765128F2928600119C5A /* LoginVC.swift */; };
+		1FCDB49528F540930006708A /* Feature_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F00760D28F27B7C00119C5A /* Feature_Login.framework */; };
+		1FCDB49628F540930006708A /* Feature_Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F00760D28F27B7C00119C5A /* Feature_Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FCDB49B28F541870006708A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCDB49A28F541870006708A /* Shared.framework */; };
+		1FCDB49C28F541870006708A /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCDB49A28F541870006708A /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,29 @@
 			remoteGlobalIDString = 1F00761A28F27BDC00119C5A;
 			remoteInfo = LoginFeatuer;
 		};
+		1FCDB49728F540930006708A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F00760428F27B7C00119C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F00760C28F27B7C00119C5A;
+			remoteInfo = "Feature-Login";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FCDB49928F540930006708A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FCDB49628F540930006708A /* Feature_Login.framework in Embed Frameworks */,
+				1FCDB49C28F541870006708A /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F00760D28F27B7C00119C5A /* Feature_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feature_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +82,7 @@
 		1F00764028F27BDD00119C5A /* LoginFeatuerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeatuerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1F00764C28F27C3800119C5A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		1F00765128F2928600119C5A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1FCDB49A28F541870006708A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCDB49528F540930006708A /* Feature_Login.framework in Frameworks */,
+				1FCDB49B28F541870006708A /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +127,7 @@
 				1F00763328F27BDD00119C5A /* LoginFeatuerTests */,
 				1F00763D28F27BDD00119C5A /* LoginFeatuerUITests */,
 				1F00760E28F27B7C00119C5A /* Products */,
+				1FCDB49428F540930006708A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +191,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		1FCDB49428F540930006708A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FCDB49A28F541870006708A /* Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -200,10 +238,12 @@
 				1F00761728F27BDC00119C5A /* Sources */,
 				1F00761828F27BDC00119C5A /* Frameworks */,
 				1F00761928F27BDC00119C5A /* Resources */,
+				1FCDB49928F540930006708A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1FCDB49828F540930006708A /* PBXTargetDependency */,
 			);
 			name = LoginFeatuer;
 			productName = LoginFeatuer;
@@ -377,6 +417,11 @@
 			isa = PBXTargetDependency;
 			target = 1F00761A28F27BDC00119C5A /* LoginFeatuer */;
 			targetProxy = 1F00763B28F27BDD00119C5A /* PBXContainerItemProxy */;
+		};
+		1FCDB49828F540930006708A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F00760C28F27B7C00119C5A /* Feature-Login */;
+			targetProxy = 1FCDB49728F540930006708A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -592,6 +637,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,7 +649,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -620,6 +666,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -631,7 +678,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
