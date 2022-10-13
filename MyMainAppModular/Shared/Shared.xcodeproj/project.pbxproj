@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1F00760228F27B1E00119C5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00760128F27B1E00119C5A /* ListCell.swift */; };
+		1FB5269B28F7E1C000B16C5E /* DogFactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5269A28F7E1C000B16C5E /* DogFactData.swift */; };
+		1FB5269D28F7E31200B16C5E /* DogFactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5269C28F7E31200B16C5E /* DogFactError.swift */; };
+		1FB526A028F7E51700B16C5E /* DogFactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5269F28F7E51700B16C5E /* DogFactsRepository.swift */; };
+		1FB526A228F7E63B00B16C5E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB526A128F7E63B00B16C5E /* Environment.swift */; };
+		1FB526A428F7E6FF00B16C5E /* DogFactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */; };
 		1FC6E1A428F2793E000621C0 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC6E1A328F2793E000621C0 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F00760128F27B1E00119C5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		1FB5269A28F7E1C000B16C5E /* DogFactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactData.swift; sourceTree = "<group>"; };
+		1FB5269C28F7E31200B16C5E /* DogFactError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactError.swift; sourceTree = "<group>"; };
+		1FB5269F28F7E51700B16C5E /* DogFactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsRepository.swift; sourceTree = "<group>"; };
+		1FB526A128F7E63B00B16C5E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsAPI.swift; sourceTree = "<group>"; };
 		1FC6E1A028F2793E000621C0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6E1A328F2793E000621C0 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,6 +41,7 @@
 		1F0075FD28F27AAC00119C5A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5269C28F7E31200B16C5E /* DogFactError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -45,6 +56,7 @@
 		1F0075FF28F27ABF00119C5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5269A28F7E1C000B16C5E /* DogFactData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -55,6 +67,16 @@
 				1F00760128F27B1E00119C5A /* ListCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		1FB5269E28F7E50200B16C5E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1FB5269F28F7E51700B16C5E /* DogFactsRepository.swift */,
+				1FB526A128F7E63B00B16C5E /* Environment.swift */,
+				1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		1FC6E19628F2793E000621C0 = {
@@ -76,6 +98,7 @@
 		1FC6E1A228F2793E000621C0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5269E28F7E50200B16C5E /* Repository */,
 				1F00760028F27AC800119C5A /* UI */,
 				1F0075FF28F27ABF00119C5A /* Model */,
 				1F0075FE28F27AB100119C5A /* JSON */,
@@ -165,7 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB5269B28F7E1C000B16C5E /* DogFactData.swift in Sources */,
+				1FB5269D28F7E31200B16C5E /* DogFactError.swift in Sources */,
+				1FB526A028F7E51700B16C5E /* DogFactsRepository.swift in Sources */,
 				1F00760228F27B1E00119C5A /* ListCell.swift in Sources */,
+				1FB526A228F7E63B00B16C5E /* Environment.swift in Sources */,
+				1FB526A428F7E6FF00B16C5E /* DogFactsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

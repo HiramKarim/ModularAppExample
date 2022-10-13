@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FB5269928F7DE7900B16C5E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5269828F7DE7900B16C5E /* URLSessionHTTPClient.swift */; };
 		1FCB61D528F68C2300EAB243 /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCB61CC28F68C2300EAB243 /* CoreNetwork.framework */; };
 		1FCB61DA28F68C2300EAB243 /* CoreNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB61D928F68C2300EAB243 /* CoreNetworkTests.swift */; };
 		1FCB61DB28F68C2300EAB243 /* CoreNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCB61CF28F68C2300EAB243 /* CoreNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FB5269828F7DE7900B16C5E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		1FCB61CC28F68C2300EAB243 /* CoreNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCB61CF28F68C2300EAB243 /* CoreNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNetwork.h; sourceTree = "<group>"; };
 		1FCB61D428F68C2300EAB243 /* CoreNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				1FCB61CF28F68C2300EAB243 /* CoreNetwork.h */,
 				1FCB61E528F68C7C00EAB243 /* HTTPClient.swift */,
 				1FCB61E728F68D2200EAB243 /* URLSessionHTTPClientError.swift */,
+				1FB5269828F7DE7900B16C5E /* URLSessionHTTPClient.swift */,
 			);
 			path = CoreNetwork;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				1FCB61E828F68D2200EAB243 /* URLSessionHTTPClientError.swift in Sources */,
 				1FCB61E628F68C7C00EAB243 /* HTTPClient.swift in Sources */,
+				1FB5269928F7DE7900B16C5E /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
