@@ -16,3 +16,15 @@ struct DogFactsAPI {
     }
     
 }
+
+extension DogFactsAPI {
+    var factsURL: URL {
+        getURL(path: "")
+    }
+}
+
+fileprivate extension DogFactsAPI {
+    func getURL(path: String) -> URL {
+        return URL(string: "\(environment.baseURL)/\(path)")!
+    }
+}

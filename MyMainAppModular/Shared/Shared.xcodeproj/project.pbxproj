@@ -14,7 +14,25 @@
 		1FB526A228F7E63B00B16C5E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB526A128F7E63B00B16C5E /* Environment.swift */; };
 		1FB526A428F7E6FF00B16C5E /* DogFactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */; };
 		1FC6E1A428F2793E000621C0 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC6E1A328F2793E000621C0 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FCF861B28FD231900F19A7F /* DogFactDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCF861A28FD231900F19A7F /* DogFactDTO.swift */; };
+		1FCF861D28FD239600F19A7F /* DogFactsRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCF861C28FD239600F19A7F /* DogFactsRemoteRepository.swift */; };
+		1FCF862028FD264500F19A7F /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCF861F28FD264500F19A7F /* CoreNetwork.framework */; };
+		1FCF862128FD264500F19A7F /* CoreNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCF861F28FD264500F19A7F /* CoreNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FCF862228FD264500F19A7F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FCF862128FD264500F19A7F /* CoreNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F00760128F27B1E00119C5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
@@ -25,6 +43,9 @@
 		1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsAPI.swift; sourceTree = "<group>"; };
 		1FC6E1A028F2793E000621C0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6E1A328F2793E000621C0 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		1FCF861A28FD231900F19A7F /* DogFactDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactDTO.swift; sourceTree = "<group>"; };
+		1FCF861C28FD239600F19A7F /* DogFactsRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsRemoteRepository.swift; sourceTree = "<group>"; };
+		1FCF861F28FD264500F19A7F /* CoreNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCF862028FD264500F19A7F /* CoreNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB5269A28F7E1C000B16C5E /* DogFactData.swift */,
+				1FCF861A28FD231900F19A7F /* DogFactDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -75,6 +98,7 @@
 				1FB5269F28F7E51700B16C5E /* DogFactsRepository.swift */,
 				1FB526A128F7E63B00B16C5E /* Environment.swift */,
 				1FB526A328F7E6FF00B16C5E /* DogFactsAPI.swift */,
+				1FCF861C28FD239600F19A7F /* DogFactsRemoteRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -84,6 +108,7 @@
 			children = (
 				1FC6E1A228F2793E000621C0 /* Shared */,
 				1FC6E1A128F2793E000621C0 /* Products */,
+				1FCF861E28FD264500F19A7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +133,14 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		1FCF861E28FD264500F19A7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FCF861F28FD264500F19A7F /* CoreNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -130,6 +163,7 @@
 				1FC6E19C28F2793E000621C0 /* Sources */,
 				1FC6E19D28F2793E000621C0 /* Frameworks */,
 				1FC6E19E28F2793E000621C0 /* Resources */,
+				1FCF862228FD264500F19A7F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCF861D28FD239600F19A7F /* DogFactsRemoteRepository.swift in Sources */,
+				1FCF861B28FD231900F19A7F /* DogFactDTO.swift in Sources */,
 				1FB5269B28F7E1C000B16C5E /* DogFactData.swift in Sources */,
 				1FB5269D28F7E31200B16C5E /* DogFactError.swift in Sources */,
 				1FB526A028F7E51700B16C5E /* DogFactsRepository.swift in Sources */,

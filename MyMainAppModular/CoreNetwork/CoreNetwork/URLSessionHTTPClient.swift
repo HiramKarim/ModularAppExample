@@ -15,9 +15,18 @@ public final class URLSessionHTTPClient: HTTPClient {
         self.session = session
     }
     
-    public func get(_ url: URL, responseHandler: @escaping (ResponseResult) -> Void) {
-        session.dataTask(with: url) { data, response,, error in
-            let handledResponse = Self.han
+    public func get(_ url: URL?, responseHandler: @escaping EscapingReturn) {
+        
+        guard let url = url else { return }
+        
+        session.dataTask(with: url) { data, response, error in
+            let handledResponse = Self.handle(data: data, error: error, response: response)
+            switch handledResponse {
+            case .success(let _data):
+              responseHandler(.success(_data))
+            case .failure(let _error):
+              responseHandler(.failure(_error))
+            }
         }.resume()
     }
     
@@ -26,11 +35,12 @@ public final class URLSessionHTTPClient: HTTPClient {
 extension URLSessionHTTPClient {
     internal static func handle(data: Data?, error: Error?, response: URLResponse?) -> Result<Data,URLSessionHTTPClientError> {
         if let _data = data,
-           error == nil,
-           let _response = response,
-           let _ = _response as? HTTPURLResponse {
-            return .success(data)
-        }
+               error == nil,
+               let _response = response,
+               let _ = _response as? HTTPURLResponse
+            {
+              return .success(_data)
+            }
         
         if let _error = error {
             return .failure(.error(_error))
