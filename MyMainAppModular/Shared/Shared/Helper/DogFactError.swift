@@ -9,4 +9,5 @@ import Foundation
 
 enum DogFactError: Error {
   case fetchError(Error)
+  case notParsable(Data)
 }
