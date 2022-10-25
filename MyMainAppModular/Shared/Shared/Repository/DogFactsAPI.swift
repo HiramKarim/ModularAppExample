@@ -17,10 +17,20 @@ struct DogFactsAPI {
     
 }
 
+struct DogFactsEnvironment: Environment {
+    let baseURL: String = "https://dog-api.kinduff.com/api"
+}
+
 extension DogFactsAPI {
     var factsURL: URL {
-        getURL(path: "")
+        getURL(path: "facts")
     }
+}
+
+extension DogFactsAPI {
+  static var dev: Self {
+    DogFactsAPI(environment: DogFactsEnvironment())
+  }
 }
 
 fileprivate extension DogFactsAPI {

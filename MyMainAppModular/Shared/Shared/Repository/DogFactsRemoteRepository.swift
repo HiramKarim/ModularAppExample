@@ -43,6 +43,6 @@ final internal class DogFactsRemoteRepository: DogFactsRepository {
 
 fileprivate extension DogFactDTO {
   var toData: DogFactData {
-    DogFactData()
+      DogFactData(factMessage: "")
   }
 }

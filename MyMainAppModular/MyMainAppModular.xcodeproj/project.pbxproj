@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F00764F28F27EE300119C5A /* Feature_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F00764E28F27EE300119C5A /* Feature_Login.framework */; };
-		1F00765028F27EE300119C5A /* Feature_Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F00764E28F27EE300119C5A /* Feature_Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1FC6E1AB28F27A1E000621C0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC6E1AA28F27A1E000621C0 /* Shared.framework */; };
-		1FC6E1AC28F27A1E000621C0 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC6E1AA28F27A1E000621C0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FCBA63229078AE8000686A5 /* DogFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBA63129078AE8000686A5 /* DogFactsViewModel.swift */; };
+		1FCBA63429078BCF000686A5 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCBA63329078BCF000686A5 /* Shared.framework */; };
+		1FCBA63529078BCF000686A5 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCBA63329078BCF000686A5 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FCBA63829078BD3000686A5 /* Feature_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCBA63729078BD3000686A5 /* Feature_Login.framework */; };
+		1FCBA63929078BD3000686A5 /* Feature_Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCBA63729078BD3000686A5 /* Feature_Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCBBF1428EE99F1008329DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF1328EE99F1008329DF /* AppDelegate.swift */; };
 		1FCBBF1628EE99F1008329DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF1528EE99F1008329DF /* SceneDelegate.swift */; };
 		1FCBBF1828EE99F1008329DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF1728EE99F1008329DF /* ViewController.swift */; };
@@ -40,14 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1FC6E1AD28F27A1E000621C0 /* Embed Frameworks */ = {
+		1FCBA63629078BCF000686A5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1FC6E1AC28F27A1E000621C0 /* Shared.framework in Embed Frameworks */,
-				1F00765028F27EE300119C5A /* Feature_Login.framework in Embed Frameworks */,
+				1FCBA63529078BCF000686A5 /* Shared.framework in Embed Frameworks */,
+				1FCBA63929078BD3000686A5 /* Feature_Login.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +58,9 @@
 /* Begin PBXFileReference section */
 		1F00764E28F27EE300119C5A /* Feature_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feature_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6E1AA28F27A1E000621C0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCBA63129078AE8000686A5 /* DogFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsViewModel.swift; sourceTree = "<group>"; };
+		1FCBA63329078BCF000686A5 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCBA63729078BD3000686A5 /* Feature_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feature_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCBBF1028EE99F1008329DF /* MyMainAppModular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMainAppModular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCBBF1328EE99F1008329DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCBBF1528EE99F1008329DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC6E1AB28F27A1E000621C0 /* Shared.framework in Frameworks */,
-				1F00764F28F27EE300119C5A /* Feature_Login.framework in Frameworks */,
+				1FCBA63429078BCF000686A5 /* Shared.framework in Frameworks */,
+				1FCBA63829078BD3000686A5 /* Feature_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,7 @@
 				1FCBBF1328EE99F1008329DF /* AppDelegate.swift */,
 				1FCBBF1528EE99F1008329DF /* SceneDelegate.swift */,
 				1FCBBF1728EE99F1008329DF /* ViewController.swift */,
+				1FCBA63129078AE8000686A5 /* DogFactsViewModel.swift */,
 				1FCBBF1928EE99F1008329DF /* Main.storyboard */,
 				1FCBBF1C28EE99F2008329DF /* Assets.xcassets */,
 				1FCBBF1E28EE99F2008329DF /* LaunchScreen.storyboard */,
@@ -157,6 +162,8 @@
 		1FCBBFF628EEA0B2008329DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FCBA63729078BD3000686A5 /* Feature_Login.framework */,
+				1FCBA63329078BCF000686A5 /* Shared.framework */,
 				1F00764E28F27EE300119C5A /* Feature_Login.framework */,
 				1FC6E1AA28F27A1E000621C0 /* Shared.framework */,
 				1FCBBFFC28EEA13D008329DF /* SharedFramework.framework */,
@@ -176,7 +183,7 @@
 				1FCBBF0C28EE99F1008329DF /* Sources */,
 				1FCBBF0D28EE99F1008329DF /* Frameworks */,
 				1FCBBF0E28EE99F1008329DF /* Resources */,
-				1FC6E1AD28F27A1E000621C0 /* Embed Frameworks */,
+				1FCBA63629078BCF000686A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FCBBF1828EE99F1008329DF /* ViewController.swift in Sources */,
+				1FCBA63229078AE8000686A5 /* DogFactsViewModel.swift in Sources */,
 				1FCBBF1428EE99F1008329DF /* AppDelegate.swift in Sources */,
 				1FCBBF1628EE99F1008329DF /* SceneDelegate.swift in Sources */,
 			);

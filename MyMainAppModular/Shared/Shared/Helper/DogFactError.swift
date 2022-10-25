@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DogFactError: Error {
+public enum DogFactError: Error {
   case fetchError(Error)
   case notParsable(Data)
 }

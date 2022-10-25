@@ -8,5 +8,13 @@
 import Foundation
 
 public struct DogFactData {
-    
+    let factMessage: String
+}
+
+fileprivate extension DogFactDTO {
+    var toData: DogFactData {
+        return DogFactData(
+            factMessage: facts.reduce(into: "",  { $0.append($1) } )
+        )
+    }
 }
