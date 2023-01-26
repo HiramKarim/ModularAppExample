@@ -8,7 +8,7 @@
 import Foundation
 
 public struct DogFactData {
-    let factMessage: String
+    public let factMessage: String
 }
 
 fileprivate extension DogFactDTO {

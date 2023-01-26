@@ -8,17 +8,17 @@
 import Foundation
 import CoreNetwork
 
-final internal class DogFactsRemoteRepository: DogFactsRepository {
+public final class DogFactsRemoteRepository: DogFactsRepository {
     
     private let httpClient: HTTPClient
     private let api: DogFactsAPI
     
-    internal init(httpClient: HTTPClient, api: DogFactsAPI) {
+    public init(httpClient: HTTPClient, api: DogFactsAPI) {
         self.httpClient = httpClient
         self.api = api
     }
     
-    func getRandomFact(handler: @escaping (DogFactResult) -> Void) {
+    public func getRandomFact(handler: @escaping (DogFactResult) -> Void) {
         httpClient.get(api.factsURL) { result in
             switch result {
             case .success(let data):
@@ -43,6 +43,6 @@ final internal class DogFactsRemoteRepository: DogFactsRepository {
 
 fileprivate extension DogFactDTO {
   var toData: DogFactData {
-      DogFactData(factMessage: "")
+      DogFactData(factMessage: self.facts.first ?? "")
   }
 }

@@ -8,20 +8,27 @@
 import UIKit
 import Shared
 import Feature_Login
+import CoreNetwork
 
 class ViewController: UIViewController {
     
-    private var viewModel: DogFactsViewModel!
+    private let factsTextView:UITextView = {
+        let textview = UITextView()
+        textview.backgroundColor = .red
+        textview.translatesAutoresizingMaskIntoConstraints = false
+        return textview
+    }()
     
-    let loginButton: UIButton = {
+    let fetchFactsButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.system)
-        button.setTitle("Go to login", for: .normal)
+        button.setTitle("fetch", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-     var loginCoordinator:LoginCoordinator?
+    var loginCoordinator:LoginCoordinator?
+    private var viewModel: DogFactsViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +36,24 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
-        self.view.addSubview(loginButton)
+        self.view.addSubview(factsTextView)
+        self.view.addSubview(fetchFactsButton)
         
         NSLayoutConstraint.activate([
-            loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            loginButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            loginButton.widthAnchor.constraint(equalToConstant: 100),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            factsTextView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            factsTextView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            factsTextView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            factsTextView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
+            
+            fetchFactsButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            fetchFactsButton.topAnchor.constraint(equalTo: factsTextView.bottomAnchor, constant: 10),
+            fetchFactsButton.widthAnchor.constraint(equalToConstant: 50),
+            fetchFactsButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        loginButton.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
+        fetchFactsButton.addTarget(self, action: #selector(fetchDogFacts), for: .touchUpInside)
+        
+        commonInit()
     }
     
     private func commonInit() {
@@ -51,13 +66,24 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Binding
-      func onSuccess(factMessage: String) {
-        print(Self.self, #function, factMessage)
-      }
-      
-      func onError(errorMessage: String) {
-        print(Self.self, #function, errorMessage)
-      }
+    func onSuccess(factMessage: String) {
+        
+        DispatchQueue.main.async {
+            self.factsTextView.text = factMessage
+        }
+        
+      print(Self.self, #function, factMessage)
+    }
+    
+    func onError(errorMessage: String) {
+      print(Self.self, #function, errorMessage)
+    }
+    
+    //MARK: -  Action Button
+    @objc
+    private func fetchDogFacts() {
+        self.viewModel.onUserInput(.fetchFactClicked)
+    }
     
     @objc
     private func goToLogin() {
@@ -65,11 +91,10 @@ class ViewController: UIViewController {
         self.loginCoordinator?.makeLoginCoordinator()
     }
 
-
 }
 
 fileprivate func makeRepository() -> DogFactsRepository {
-    DogFactsRemoteRepository(
+    return DogFactsRemoteRepository(
         httpClient: URLSessionHTTPClient(),
         api: .dev
       )

@@ -39,3 +39,20 @@ final class DogFactsViewModel {
     }
     
 }
+
+//MARK: - User Interaction
+
+extension DogFactsViewModel {
+    
+    enum UserInput {
+        case fetchFactClicked
+    }
+    
+    func onUserInput(_ input: UserInput) {
+        switch input {
+        case .fetchFactClicked:
+            fetchRandomFact()
+        }
+    }
+    
+}

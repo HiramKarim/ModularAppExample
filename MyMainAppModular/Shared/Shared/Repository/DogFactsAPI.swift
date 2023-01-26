@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DogFactsAPI {
+public struct DogFactsAPI {
     
     let environment: Environment
     
@@ -28,13 +28,13 @@ extension DogFactsAPI {
 }
 
 extension DogFactsAPI {
-  static var dev: Self {
+  public static var dev: Self {
     DogFactsAPI(environment: DogFactsEnvironment())
   }
 }
 
 fileprivate extension DogFactsAPI {
     func getURL(path: String) -> URL {
-        return URL(string: "\(environment.baseURL)/\(path)")!
+        return URL(string: "\(environment.baseURL)/\(path)?number=1")!
     }
 }

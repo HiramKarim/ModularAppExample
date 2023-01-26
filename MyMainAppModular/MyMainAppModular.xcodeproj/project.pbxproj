@@ -21,6 +21,8 @@
 		1FCBBF2B28EE99F2008329DF /* MyMainAppModularTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF2A28EE99F2008329DF /* MyMainAppModularTests.swift */; };
 		1FCBBF3528EE99F2008329DF /* MyMainAppModularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF3428EE99F2008329DF /* MyMainAppModularUITests.swift */; };
 		1FCBBF3728EE99F2008329DF /* MyMainAppModularUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBBF3628EE99F2008329DF /* MyMainAppModularUITestsLaunchTests.swift */; };
+		1FCD5EDE2908D21F00658956 /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD5EDD2908D21F00658956 /* CoreNetwork.framework */; };
+		1FCD5EDF2908D21F00658956 /* CoreNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD5EDD2908D21F00658956 /* CoreNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 			files = (
 				1FCBA63529078BCF000686A5 /* Shared.framework in Embed Frameworks */,
 				1FCBA63929078BD3000686A5 /* Feature_Login.framework in Embed Frameworks */,
+				1FCD5EDF2908D21F00658956 /* CoreNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +80,7 @@
 		1FCBBFF728EEA0B2008329DF /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCBBFFA28EEA124008329DF /* LoginModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCBBFFC28EEA13D008329DF /* SharedFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SharedFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCD5EDD2908D21F00658956 /* CoreNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			files = (
 				1FCBA63429078BCF000686A5 /* Shared.framework in Frameworks */,
 				1FCBA63829078BD3000686A5 /* Feature_Login.framework in Frameworks */,
+				1FCD5EDE2908D21F00658956 /* CoreNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +167,7 @@
 		1FCBBFF628EEA0B2008329DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FCD5EDD2908D21F00658956 /* CoreNetwork.framework */,
 				1FCBA63729078BD3000686A5 /* Feature_Login.framework */,
 				1FCBA63329078BCF000686A5 /* Shared.framework */,
 				1F00764E28F27EE300119C5A /* Feature_Login.framework */,
